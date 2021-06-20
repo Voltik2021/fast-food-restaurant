@@ -1,0 +1,10 @@
+.basket-control{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    
+}
+
+.blackBasket-control {
+    margin: 0px 0 5px 3px;
+}

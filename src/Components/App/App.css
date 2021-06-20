@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Barlow+Condensed&family=Cabin+Condensed:wght@700&display=swap');
+
+.main-page {
+    font-family: 'Barlow Condensed', sans-serif;
+    width: 90%;
+    margin: 0px auto;
+}

@@ -1,0 +1,43 @@
+.bottom-header{
+    display: flex;   
+    justify-content: space-between;
+    height: 233px;
+}
+
+.delivery-title-control {
+    font-family: 'Cabin Condensed', sans-serif;   
+    font-size: 72px; 
+}
+
+.delivery-lable-control{
+    font-size: 32px;
+    margin: 0 40px 0 0;
+}
+
+.delivery-input {
+    background-color: #F7F6F5;
+    height: 42px;
+    border: none;
+    margin-left: 13px;
+    font-size: 16px;
+}
+
+.header-button-control{
+    font-family: 'Abel', sans-serif;
+    margin-top: 75px;
+    height: 42px;
+    width: 145px;
+    font-size: 16px;
+    color: #9D9D9D;
+}
+
+.color-button {
+    background-color: #E4002B;
+    color: #FFFF;
+}
+
+.delivery-select {
+    height: 42px;
+    background-color: #F7F6F5;
+    font-size: 16px;
+}
