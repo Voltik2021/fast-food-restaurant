@@ -1,4 +1,8 @@
 
+.header-main {
+    padding: 0 95px;
+}
+
 .top-header {
     display: flex;
     justify-content: space-between;

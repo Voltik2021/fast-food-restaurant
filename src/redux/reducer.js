@@ -1,16 +1,21 @@
 let initialState = {
-    flagDeliveryMethod:true,
-
-    category:[
-        {id:1, name: 'Бургеры', products: [1, 2, 3, 4, 5, 6]},
-    ]
+    flagDeliveryMethod: true,
+    valueBascket: 0,
+    productQuantities: 0
+    
 }
 
 export default function reducer(state = initialState, action) {
+    let newState
     switch(action.type){
         case 'CHANGE_DELIVERY':            
-            let newState = {...state}
+            newState = {...state}
             newState.flagDeliveryMethod = action.payload
+            return newState
+        case 'TRANSFER_BASCKET':
+            newState = {...state}
+            newState.valueBascket += action.payload
+            newState.productQuantities += 1
             return newState
     }
     return state
