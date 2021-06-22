@@ -11,50 +11,6 @@
     flex-wrap: wrap;
 }
 
-.product {
-    width: 288px;
-    height: 360px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 24px;
-}
-
-.product-backgaund-white:hover{
-    background-color: #FFFF;
-    transform: scale(1.05);
-    transition: 0.2s;
-}
-
-.product-backgaund-gray:hover{
-    background-color: #F7F6F5;
-    transform: scale(1.05);
-    transition: 0.2s;
-}
-
-.price {
-    color: #E4002B;
-}
-
-.price::after {    
-    content: "\20BD";
-}
-
-.wrapper-button-product {
-    position: relative;
-}
-
-.button-product {
-    position: absolute;
-    bottom:  15px;
-    left: 35px;
-    background-color: #FFFF;
-    border-radius: 50%;
-    border: none;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
-    width: 40px;
-    height: 40px;
-}
 
 /* .product-control:hover {    
     background-color: #FFFF;
