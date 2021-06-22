@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Barlow+Condensed&family=Cabin+Condensed:wght@700&display=swap');
 
+@font-face {
+    font-family: 'Cera Condensed Pro';
+    src: local('Cera Condensed Pro Regular'), local('Cera-Condensed-Pro-Regular'),
+        url('../../fonts/CeraCondensedPro-Regular/CeraCondensedPro-Regular.woff2') format('woff2'),
+        url('../../fonts/CeraCondensedPro-Regular/CeraCondensedPro-Regular.woff') format('woff'),
+        url('../../fonts/CeraCondensedPro-Regular/CeraCondensedPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
 body{
     margin: 0;
 }

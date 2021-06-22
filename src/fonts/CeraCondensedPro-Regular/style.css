@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Cera Condensed Pro';
+    src: local('Cera Condensed Pro Regular'), local('Cera-Condensed-Pro-Regular'),
+        url('CeraCondensedPro-Regular.woff2') format('woff2'),
+        url('CeraCondensedPro-Regular.woff') format('woff'),
+        url('CeraCondensedPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

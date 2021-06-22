@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './Basket.css';
+import bask from '../../img/blackBasket.png'
 
 
 export default function Basket() {
@@ -17,7 +18,12 @@ export default function Basket() {
     return (
         <div>
             {console.log(state.valueBascket)}
-            {state.valueBascket ? <button>1</button> : emptyBasket}
+            {state.valueBascket ? 
+            <button
+             className = 'state-basket'             
+            >
+                <span className = 'total-price'> {state.valueBascket}</span><img className = 'white-basket' src='./src/img/Basket.png'/>
+            </button> : emptyBasket}
 
         </div>
     )

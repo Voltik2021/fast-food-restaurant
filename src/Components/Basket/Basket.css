@@ -8,3 +8,26 @@
 .blackBasket-control {
     margin: 0px 0 5px 3px;
 }
+
+.state-basket {    
+    background-repeat: no-repeat;
+    height: 36px;
+    min-width: 82px;
+    border-radius: 20px;
+    background-size: cover;
+    border:none;
+    font-size: 20px;
+    color: white;
+    background-color: #E4002B;
+    display: flex;
+    align-items: center;
+    font-family: 'Cera Condensed Pro', 'normal';
+}
+
+.white-basket {
+    margin-bottom: 3px;
+}
+
+.total-price::after {    
+    content: "\20BD";
+}
