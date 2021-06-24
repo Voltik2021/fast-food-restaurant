@@ -15,11 +15,7 @@ export default function ProductList({ name, products, index, id }) {
             getProduct(products).then(data => {
                 let filteredData = data.filter(item => item.delivery === true)    
                     setFilteredProductList(filteredData) 
-                    setProductList(data)})
-       
-             
-            
-       
+                    setProductList(data)})      
          
 
     }, [])
@@ -33,7 +29,7 @@ export default function ProductList({ name, products, index, id }) {
             style={!(index % 2) ? { backgroundColor: '#F7F6F5' } : { backgroundColor: '#FFFF' }}
             className='category'
         >
-           {console.log(filteredProductList)}
+         
             <h2 className='category-title' >{name}</h2>
             <div className='product-list-control'>
                 {(!state.flagDeliveryMethod?productList:filteredProductList).map((item) =>

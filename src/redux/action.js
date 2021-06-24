@@ -14,9 +14,23 @@ export function transferBasket(product) {
     }
 }
 
+export function transferBasketForDielivery(product) {
+    return {
+        type: 'TRANSFER_BASCKET_FOR_DELIVERY',
+        payload:product
+    }
+}
+
 export function removeFromBasket(product) {
     return {
         type: 'REMOVE_PRODUCT_BASCKET',
+        payload:product
+    }
+}
+
+export function removeBasketForDielivery(product) {
+    return {
+        type: 'REMOVE_PRODUCT_BASCKET_FOR_DELIVERY',
         payload:product
     }
 }

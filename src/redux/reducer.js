@@ -1,6 +1,7 @@
 let initialState = {
     flagDeliveryMethod: false,
     valueBascket: 0,
+    valueBascketForDelivery: 0,
     listProductsInBasket: [],
     listProductsInBasketForDelivery: [],
     pickUpService: 'Юго-запод'    
@@ -32,12 +33,37 @@ export default function reducer(state = initialState, action) {
                 productAccounting = {...action.payload, quantity: 1}
                 newState.listProductsInBasket.push(productAccounting)
                 return newState
-            }            
+            }      
+            
+        case 'TRANSFER_BASCKET_FOR_DELIVERY':
+            newState = {...state}
+            newState.valueBascketForDelivery += action.payload.price            
+            if (!newState.listProductsInBasketForDelivery.length) {
+                productAccounting = {...action.payload, quantity: 1}
+                newState.listProductsInBasketForDelivery.push(productAccounting)               
+                return newState
+            }
+            findProduct = newState.listProductsInBasketForDelivery.find(item => item.id === action.payload.id)
+            if (findProduct) {               
+                findProduct.quantity += 1;              
+                return newState
+            } else {
+                productAccounting = {...action.payload, quantity: 1}
+                newState.listProductsInBasketForDelivery.push(productAccounting)
+                return newState
+            }
            
         case 'REMOVE_PRODUCT_BASCKET':
             newState = {...state}
             newState.valueBascket -= action.payload.price 
             findProduct = newState.listProductsInBasket.find(item => item.id === action.payload.id)
+            findProduct.quantity -= 1
+            return newState
+
+        case 'REMOVE_PRODUCT_BASCKET_FOR_DELIVERY':
+            newState = {...state}
+            newState.valueBascketForDelivery -= action.payload.price 
+            findProduct = newState.listProductsInBasketForDelivery.find(item => item.id === action.payload.id)
             findProduct.quantity -= 1
             return newState
         

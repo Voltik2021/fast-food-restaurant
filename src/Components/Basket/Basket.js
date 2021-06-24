@@ -26,7 +26,7 @@ export default function Basket() {
                     form='buttonBasket'
                     className='state-basket'
                 >
-                    <span className='total-price'> {state.valueBascket}</span><img className='white-basket' src='./src/img/Basket.png' />
+                    <span className='total-price'> {!state.flagDeliveryMethod?state.valueBascket:state.valueBascketForDelivery}</span><img className='white-basket' src='./src/img/Basket.png' />
                 </button> : emptyBasket}
 
         </div>
