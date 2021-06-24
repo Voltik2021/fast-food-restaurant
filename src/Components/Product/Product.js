@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { transferBasket, removeFromBasket } from '../../redux/action'
 import './Product.css'
 
-export default function Product({ name, id, price, img, product, index}) {    
+export default function Product({ name, id, price, img, index}) {    
     let dispatch = useDispatch();
     let state = useSelector(state => state);       
     let findProduct = state.listProductsInBasket.find((item) => { return item.id === id}) 

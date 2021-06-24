@@ -21,6 +21,7 @@
     background-color: #E4002B;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     font-family: 'Cera Condensed Pro', 'normal';
 }
 

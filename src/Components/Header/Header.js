@@ -6,7 +6,7 @@ import DeliveryMethod from '../DeliveryMethod/DeliveryMethod';
 
 export default function Header () {
     return (
-        <div className = 'header-main'>
+        <div className = 'header-main' id = 'header'>
             <div className = 'top-header'>
                 <img src = './src/img/BurgerMenu.svg'/>
                 <div className = 'logo-control'>

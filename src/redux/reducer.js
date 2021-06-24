@@ -1,8 +1,9 @@
 let initialState = {
-    flagDeliveryMethod: true,
+    flagDeliveryMethod: false,
     valueBascket: 0,
-    listProductsInBasket: []
-    
+    listProductsInBasket: [],
+    listProductsInBasketForDelivery: [],
+    pickUpService: 'Юго-запод'    
     
 }
 
@@ -31,20 +32,38 @@ export default function reducer(state = initialState, action) {
                 productAccounting = {...action.payload, quantity: 1}
                 newState.listProductsInBasket.push(productAccounting)
                 return newState
-            }
-            
-            return newState
+            }            
+           
         case 'REMOVE_PRODUCT_BASCKET':
             newState = {...state}
             newState.valueBascket -= action.payload.price 
             findProduct = newState.listProductsInBasket.find(item => item.id === action.payload.id)
             findProduct.quantity -= 1
             return newState
-            // productAccounting = {...action.payload, quantity: findProduct.quantity - 1}
+        
+        case 'ACCEPT_ORDER_START':
+            console.log('ACCEPT_ORDER_START')
+                    
+            return state
+        
+        case 'ACCEPT_ORDER_SUCCESS':
+            console.log(action.payload)
+            newState = {...state}
+            newState.valueBascket = 0;
+            newState.listProductsInBasket = []
 
-            
-            
             return newState
+        
+        case 'ACCEPT_ORDER_ERR':
+            console.log(action.payload)
+            return state
+        case 'SELECT_PICK_UP_SERVICE':
+            console.log(action.payload)
+            newState = {...state};
+            newState.pickUpService = action.payload;
+            return newState
+
+
     }
     return state
 }

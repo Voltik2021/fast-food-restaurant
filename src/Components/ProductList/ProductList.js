@@ -4,27 +4,40 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getProduct } from '../../APIserviсe';
 import './ProductList.css'
 
-export default function ProductList({ name, products, index }) {
+export default function ProductList({ name, products, index, id }) {
     let [productList, setProductList] = useState([]);
+    let [filteredProductList, setFilteredProductList] = useState([])
     let dispatch = useDispatch();
     let state = useSelector(state => state);
 
     useEffect(() => {
-        getProduct(products).then(data => setProductList(data))
+        
+            getProduct(products).then(data => {
+                let filteredData = data.filter(item => item.delivery === true)    
+                    setFilteredProductList(filteredData) 
+                    setProductList(data)})
+       
+             
+            
+       
+         
+
     }, [])
 
+    
     let findProduct
     return (
 
         <div
+            id = {String(id)}
             style={!(index % 2) ? { backgroundColor: '#F7F6F5' } : { backgroundColor: '#FFFF' }}
             className='category'
         >
-           
+           {console.log(filteredProductList)}
             <h2 className='category-title' >{name}</h2>
             <div className='product-list-control'>
-                {productList.map((item) =>
-                    <Product key={item.id} {...item} product = {item} index = {index} />)}
+                {(!state.flagDeliveryMethod?productList:filteredProductList).map((item) =>
+                    <Product key={item.id} {...item}  index = {index} />)}
             </div>
         </div>
     )

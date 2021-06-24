@@ -13,8 +13,13 @@ export function getProduct(arr) {
 
 }
 
-// export function getArrCategory() {
-//     return fetch('http://localhost:3000/getListCategory')
-//         .then(resp => resp.json())
-// }
+
+export function executionOrder(order) {
+    return fetch('http://localhost:3000/order', {
+        method: 'POST',
+        headers: {'Content-type': 'application/json'},
+        body: JSON.stringify(order)        
+    })
+        .then(resp => resp.json())
+}
 

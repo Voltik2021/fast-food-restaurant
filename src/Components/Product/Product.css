@@ -11,12 +11,14 @@
     background-color: #FFFF;
     transform: scale(1.05);
     transition: 0.2s;
+    z-index: 10;
 }
 
 .product-backgaund-gray:hover{
     background-color: #F7F6F5;
     transform: scale(1.05);
     transition: 0.2s;
+    z-index: 10;
 }
 
 .price {
