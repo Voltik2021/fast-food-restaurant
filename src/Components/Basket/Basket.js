@@ -13,7 +13,7 @@ export default function Basket() {
     let emptyBasket =
         <div className='basket-control'>
             <span>Товар не выбран</span>
-            <img className='blackBasket-control' src='/img/blackBasket.png' />
+            <img className='blackBasket-control' src='public/img/blackBasket.png' />
         </div>
     
 
