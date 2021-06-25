@@ -1,5 +1,5 @@
 export function getArrCategory() {
-    return fetch('http://api-test-fast-food-store.herokuapp.com/getListCategory')
+    return fetch('https://api-test-fast-food-store.herokuapp.com/getListCategory')
         .then(resp => resp.json())
 }
 
