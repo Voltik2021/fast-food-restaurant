@@ -6,12 +6,8 @@ import { changeDelivery, acceptOrder, selectPickUpService } from '../../redux/ac
 
 export default function DeliveryMethod() {
     let state = useSelector(state => state);
-    let dispatch = useDispatch();
-    console.log(state.listProductsInBasket)
-    let change = (e) => {
-        e.target.setCustomValidity('Нужно заполнить для оформления доставки')
-       
-    }
+    let dispatch = useDispatch();   
+    
 
     return (
         <div className='bottom-header'>
@@ -20,17 +16,18 @@ export default function DeliveryMethod() {
                     <div>
                         <h1 className='delivery-title-control'>Доставка г.Москва</h1>
                     </div>
-                    <form                       
-                        onSubmit = {(e) => dispatch(acceptOrder(e, state.listProductsInBasket))}
+                    <form    
+                        className = 'delivery-form-control'                   
+                        onSubmit = {(e) => dispatch(acceptOrder(e, state.listProductsInBasketForDelivery))}
                         id='buttonBasket'
                     >
                         <label className='delivery-lable-control'>
                             Улица
-                            <input name = 'street' required onInvalid = {(e) => (change(e))} className='delivery-input' type='text' />
+                            <input name = 'street' required ="required"  className='delivery-input' type='text' />
                         </label>
                         <label className='delivery-lable-control'>
                             Дом
-                            <input  name = 'house' required="required" className='delivery-input' type='text' />
+                            <input  name = 'house' required ="required" className='delivery-input delivery-input-correction' type='text' />
                         </label>
                     </form>
                 </div>

@@ -1,11 +1,11 @@
 export function getArrCategory() {
-    return fetch('http://localhost:3000/getListCategory')
+    return fetch('http://api-test-fast-food-store.herokuapp.com/getListCategory')
         .then(resp => resp.json())
 }
 
 export function getProduct(arr) {  
     let arrProduct = arr.map((item) => {
-        return fetch(`http://localhost:3000/getProduct?id=${item}`)
+        return fetch(`https://api-test-fast-food-store.herokuapp.com/getProduct?id=${item}`)
             .then(resp => resp.json())
     })
 
@@ -15,7 +15,7 @@ export function getProduct(arr) {
 
 
 export function executionOrder(order) {
-    return fetch('http://localhost:3000/order', {
+    return fetch('https://api-test-fast-food-store.herokuapp.com/order', {
         method: 'POST',
         headers: {'Content-type': 'application/json'},
         body: JSON.stringify(order)        

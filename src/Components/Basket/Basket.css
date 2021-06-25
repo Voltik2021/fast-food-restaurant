@@ -23,6 +23,7 @@
     align-items: center;
     justify-content: space-around;
     font-family: 'Cera Condensed Pro', 'normal';
+    cursor: pointer;
 }
 
 .white-basket {

@@ -19,7 +19,7 @@ export default function Basket() {
 
     return (
         <div>
-            {state.valueBascket ?
+            {!state.flagDeliveryMethod && state.valueBascket || state.flagDeliveryMethod && state.valueBascketForDelivery  ?
                 <button
 
                     onClick = {!state.flagDeliveryMethod?()=>{dispatch(acceptOrder(null, state.listProductsInBasket, state.pickUpService))}:null}

@@ -1,5 +1,5 @@
 .category {
-    padding: 40px 95px;
+    padding: 40px 6%;
 }
 
 .category-title {
@@ -8,10 +8,9 @@
 
 .product-list-control {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;  
+    justify-content: space-around; 
 }
 
 
-/* .product-control:hover {    
-    background-color: #FFFF;
-} */
+

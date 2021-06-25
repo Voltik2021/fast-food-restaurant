@@ -1,6 +1,6 @@
 
 .header-main {
-    padding: 0 95px;
+    padding: 0 6%;
 }
 
 .top-header {
@@ -12,4 +12,10 @@
 .logo-control {
     height: 10vh;
 }
+
+/* @media (min-width: 300px) and (max-width: 750px) {
+    .header-main {
+        padding: 0 95px;
+    }
+} */
 

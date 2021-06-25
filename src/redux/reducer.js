@@ -75,8 +75,15 @@ export default function reducer(state = initialState, action) {
         case 'ACCEPT_ORDER_SUCCESS':
             console.log(action.payload)
             newState = {...state}
-            newState.valueBascket = 0;
-            newState.listProductsInBasket = []
+            
+            if (action.payload.address.length === 2) {
+                newState.listProductsInBasketForDelivery = []
+                newState.valueBascketForDelivery = 0; 
+            } else {
+                newState.listProductsInBasket = []
+                newState.valueBascket = 0;                
+            }
+           
 
             return newState
         
