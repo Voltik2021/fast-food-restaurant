@@ -4,7 +4,9 @@ let initialState = {
     valueBascketForDelivery: 0,
     listProductsInBasket: [],
     listProductsInBasketForDelivery: [],
-    pickUpService: 'Юго-запод'    
+    pickUpService: 'Юго-запод',
+    valueInputStreet: '',
+    valueInputHouse: ''    
     
 }
 
@@ -17,6 +19,17 @@ export default function reducer(state = initialState, action) {
             newState = {...state}
             newState.flagDeliveryMethod = action.payload
             return newState
+
+        case 'CHANGE_VALUE_INPUT':
+            if (action.payload.flag === 'street') {              
+                newState = {...state}
+                newState.valueInputStreet = action.payload.value
+                return newState
+            } else {
+                newState = {...state}
+                newState.valueInputHouse = action.payload.value
+                return newState
+            }
         case 'TRANSFER_BASCKET':                       
             newState = {...state}
             newState.valueBascket += action.payload.price            
@@ -79,6 +92,8 @@ export default function reducer(state = initialState, action) {
             if (action.payload.address.length === 2) {
                 newState.listProductsInBasketForDelivery = []
                 newState.valueBascketForDelivery = 0; 
+                newState.valueInputStreet = '';
+                newState.valueInputHouse = '';
             } else {
                 newState.listProductsInBasket = []
                 newState.valueBascket = 0;                

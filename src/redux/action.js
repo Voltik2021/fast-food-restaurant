@@ -28,6 +28,13 @@ export function removeFromBasket(product) {
     }
 }
 
+export function changeValueInput(value) {
+    return {
+        type: 'CHANGE_VALUE_INPUT',
+        payload:value
+    }
+}
+
 export function removeBasketForDielivery(product) {
     return {
         type: 'REMOVE_PRODUCT_BASCKET_FOR_DELIVERY',

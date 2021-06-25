@@ -23,7 +23,7 @@ export default function Product({ name, id, price, img, index }) {
             className={!(index % 2) ? 'product product-backgaund-white' : 'product product-backgaund-gray'}
         >
 
-            <img src={img} />
+            <img src={img} alt = {name}/>
             <div className='wrapper-button-product'>
 
                 {state.flagDeliveryMethod && quetityProductForDelivery || !state.flagDeliveryMethod && quetityProduct ?

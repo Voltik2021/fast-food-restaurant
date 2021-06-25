@@ -1,7 +1,8 @@
 import React from 'react';
 import './DeliveryMethod.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeDelivery, acceptOrder, selectPickUpService } from '../../redux/action';
+import { changeDelivery, acceptOrder, selectPickUpService, changeValueInput } from '../../redux/action';
+import { SnackbarContent } from '@material-ui/core';
 
 
 export default function DeliveryMethod() {
@@ -13,6 +14,7 @@ export default function DeliveryMethod() {
         <div className='bottom-header'>
             {state.flagDeliveryMethod ?
                 <div>
+                    {console.log(state.valueInputStreet)}
                     <div>
                         <h1 className='delivery-title-control'>Доставка г.Москва</h1>
                     </div>
@@ -23,11 +25,11 @@ export default function DeliveryMethod() {
                     >
                         <label className='delivery-lable-control'>
                             Улица
-                            <input name = 'street' required ="required"  className='delivery-input' type='text' />
+                            <input name = 'street' required ="required"  className='delivery-input' type='text' onChange = {(e) => dispatch(changeValueInput({value:e.target.value, flag: 'street' }))} value = {state.valueInputStreet}/>
                         </label>
                         <label className='delivery-lable-control'>
                             Дом
-                            <input  name = 'house' required ="required" className='delivery-input delivery-input-correction' type='text' />
+                            <input  name = 'house' required ="required" className='delivery-input delivery-input-correction' type='text' onChange = {(e) => dispatch(changeValueInput({value:e.target.value, flag: 'house' }))} value = {state.valueInputHouse}/>
                         </label>
                     </form>
                 </div>
