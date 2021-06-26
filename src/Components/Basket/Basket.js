@@ -5,6 +5,7 @@ import './Basket.css';
 
 
 
+
 export default function Basket() {
     let state = useSelector(state => state);
     let dispatch = useDispatch()
@@ -13,7 +14,7 @@ export default function Basket() {
     let emptyBasket =
         <div className='basket-control'>
             <span>Товар не выбран</span>
-            <img className='blackBasket-control' src= {window.location.origin + '/img/blackBasket.png'} />
+            <img className='blackBasket-control' src= '/img/blackBasket.png' />
         </div>
     
 

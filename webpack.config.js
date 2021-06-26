@@ -6,17 +6,18 @@ module.exports = {
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname + '/dist'),
-        publicPath: '/'
+        publicPath: 'auto'
     },
     
     devServer: {
         port: 3001,
         historyApiFallback: true,
+        contentBase: path.join(__dirname, './public'),
     },
     
-    plugins: [
+    plugins: [      
         new HtmlWebpackPlugin({
-            template: 'public/index.html'
+            template: 'dist/index.html'
         }),
     ],
     module: {
@@ -64,16 +65,16 @@ module.exports = {
                 }
               },
               {
-                test: /\.(png|jpg|gif)$/i,
+                test: /\.(jpe?g|gif|png|svg)$/i,
                 use: [
                   {
                     loader: 'url-loader',
                     options: {
-                      limit: 8192,
-                    },
-                  },
-                ],
-              },
+                      limit: 10000
+                    }
+                  }
+                ]
+              }
         ],
     },
  
