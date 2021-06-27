@@ -1,30 +1,34 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path')
+const webpack = require('webpack')
+const ASSET_PATH = process.env.ASSET_PATH || '/'
 module.exports = {
     mode: 'development',
     entry: './index.js',
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname + '/dist'),
-        publicPath: 'auto'
+        publicPath: ASSET_PATH,
     },
     
     devServer: {
         port: 3001,
-        historyApiFallback: true,
-        contentBase: path.join(__dirname, './public'),
+        historyApiFallback: true,        
     },
     
     plugins: [      
         new HtmlWebpackPlugin({
-            template: 'dist/index.html'
+            template: 'public/index.html'
         }),
+        new webpack.DefinePlugin({
+          'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
+        })
     ],
     module: {
         rules: [
             
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(png|jpe?g|gif|svg)$/i,
                 use: [
                   {
                     loader: 'file-loader',
@@ -40,19 +44,7 @@ module.exports = {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
-            {
-                test: /\.(gif|png|jpe?g|svg)$/i,
-                use: [
-                  'file-loader',
-                  {
-                    loader: 'image-webpack-loader',
-                    options: {
-                      bypassOnDebug: true, // webpack@1.x
-                      disable: true, // webpack@2.x and newer
-                    },
-                  },
-                ],
-            },
+            
             {
                 test: /\.(woff|woff2|ttf|otf)$/,
                 loader: 'file-loader',
@@ -64,17 +56,7 @@ module.exports = {
                   publicPath: url => '../css/' + url
                 }
               },
-              {
-                test: /\.(jpe?g|gif|png|svg)$/i,
-                use: [
-                  {
-                    loader: 'url-loader',
-                    options: {
-                      limit: 10000
-                    }
-                  }
-                ]
-              }
+              
         ],
     },
  

@@ -93,7 +93,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Basket)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _redux_action__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/action */ \"./src/redux/action.js\");\n/* harmony import */ var _Basket_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Basket.css */ \"./src/Components/Basket/Basket.css\");\n\n\n\n\nfunction Basket() {\n  var state = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {\n    return state;\n  });\n  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();\n  var emptyBasket = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"basket-control\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", null, \"\\u0422\\u043E\\u0432\\u0430\\u0440 \\u043D\\u0435 \\u0432\\u044B\\u0431\\u0440\\u0430\\u043D\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    className: \"blackBasket-control\",\n    src: window.location.origin + '/img/blackBasket.png'\n  }));\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, !state.flagDeliveryMethod && state.valueBascket || state.flagDeliveryMethod && state.valueBascketForDelivery ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"button\", {\n    onClick: !state.flagDeliveryMethod ? function () {\n      dispatch((0,_redux_action__WEBPACK_IMPORTED_MODULE_2__.acceptOrder)(null, state.listProductsInBasket, state.pickUpService));\n    } : null,\n    form: \"buttonBasket\",\n    className: \"state-basket\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", {\n    className: \"total-price\"\n  }, \" \", !state.flagDeliveryMethod ? state.valueBascket : state.valueBascketForDelivery), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    className: \"white-basket\",\n    src: \"/img/Basket.png\"\n  })) : emptyBasket);\n}\n\n//# sourceURL=webpack://fast-food-restaurant/./src/Components/Basket/Basket.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Basket)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _redux_action__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/action */ \"./src/redux/action.js\");\n/* harmony import */ var _Basket_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Basket.css */ \"./src/Components/Basket/Basket.css\");\n/* harmony import */ var _img_blackBasket_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../img/blackBasket.png */ \"./src/img/blackBasket.png\");\n/* harmony import */ var _img_basket_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../img/basket.png */ \"./src/img/basket.png\");\n\n\n\n\n\n\nfunction Basket() {\n  var state = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {\n    return state;\n  });\n  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();\n  var emptyBasket = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"basket-control\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", null, \"\\u0422\\u043E\\u0432\\u0430\\u0440 \\u043D\\u0435 \\u0432\\u044B\\u0431\\u0440\\u0430\\u043D\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    className: \"blackBasket-control\",\n    src: _img_blackBasket_png__WEBPACK_IMPORTED_MODULE_4__.default\n  }));\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, !state.flagDeliveryMethod && state.valueBascket || state.flagDeliveryMethod && state.valueBascketForDelivery ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"button\", {\n    onClick: !state.flagDeliveryMethod ? function () {\n      dispatch((0,_redux_action__WEBPACK_IMPORTED_MODULE_2__.acceptOrder)(null, state.listProductsInBasket, state.pickUpService));\n    } : null,\n    form: \"buttonBasket\",\n    className: \"state-basket\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", {\n    className: \"total-price\"\n  }, \" \", !state.flagDeliveryMethod ? state.valueBascket : state.valueBascketForDelivery), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    className: \"white-basket\",\n    src: _img_basket_png__WEBPACK_IMPORTED_MODULE_5__.default\n  })) : emptyBasket);\n}\n\n//# sourceURL=webpack://fast-food-restaurant/./src/Components/Basket/Basket.js?");
 
 /***/ }),
 
@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Header)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Header_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header.css */ \"./src/Components/Header/Header.css\");\n/* harmony import */ var _Basket_Basket__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Basket/Basket */ \"./src/Components/Basket/Basket.js\");\n/* harmony import */ var _DeliveryMethod_DeliveryMethod__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../DeliveryMethod/DeliveryMethod */ \"./src/Components/DeliveryMethod/DeliveryMethod.js\");\n\n\n\n\nfunction Header() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"header-main\",\n    id: \"header\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"top-header\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    src: \"./src/img/BurgerMenu.svg\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"logo-control\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    src: \"./src/img/logo.svg\"\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Basket_Basket__WEBPACK_IMPORTED_MODULE_2__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_DeliveryMethod_DeliveryMethod__WEBPACK_IMPORTED_MODULE_3__.default, null));\n}\n\n//# sourceURL=webpack://fast-food-restaurant/./src/Components/Header/Header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Header)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Header_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header.css */ \"./src/Components/Header/Header.css\");\n/* harmony import */ var _Basket_Basket__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Basket/Basket */ \"./src/Components/Basket/Basket.js\");\n/* harmony import */ var _DeliveryMethod_DeliveryMethod__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../DeliveryMethod/DeliveryMethod */ \"./src/Components/DeliveryMethod/DeliveryMethod.js\");\n/* harmony import */ var _img_burgerMenu_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../img/burgerMenu.svg */ \"./src/img/burgerMenu.svg\");\n/* harmony import */ var _img_logo_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../img/logo.svg */ \"./src/img/logo.svg\");\n\n\n\n\n\n\nfunction Header() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"header-main\",\n    id: \"header\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"top-header\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    src: _img_burgerMenu_svg__WEBPACK_IMPORTED_MODULE_4__.default\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"logo-control\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    src: _img_logo_svg__WEBPACK_IMPORTED_MODULE_5__.default\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Basket_Basket__WEBPACK_IMPORTED_MODULE_2__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_DeliveryMethod_DeliveryMethod__WEBPACK_IMPORTED_MODULE_3__.default, null));\n}\n\n//# sourceURL=webpack://fast-food-restaurant/./src/Components/Header/Header.js?");
 
 /***/ }),
 
@@ -314,6 +314,50 @@ eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n
 
 "use strict";
 eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    // eslint-disable-next-line no-param-reassign\n    options = {};\n  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign\n\n\n  url = url && url.__esModule ? url.default : url;\n\n  if (typeof url !== \"string\") {\n    return url;\n  } // If url is already wrapped in quotes, remove them\n\n\n  if (/^['\"].*['\"]$/.test(url)) {\n    // eslint-disable-next-line no-param-reassign\n    url = url.slice(1, -1);\n  }\n\n  if (options.hash) {\n    // eslint-disable-next-line no-param-reassign\n    url += options.hash;\n  } // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n\n\n  if (/[\"'() \\t\\n]/.test(url) || options.needQuotes) {\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, \"\\\\n\"), \"\\\"\");\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack://fast-food-restaurant/./node_modules/css-loader/dist/runtime/getUrl.js?");
+
+/***/ }),
+
+/***/ "./src/img/basket.png":
+/*!****************************!*\
+  !*** ./src/img/basket.png ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"e85eac7007ae2eb88cae60fffc0a4056.png\");\n\n//# sourceURL=webpack://fast-food-restaurant/./src/img/basket.png?");
+
+/***/ }),
+
+/***/ "./src/img/blackBasket.png":
+/*!*********************************!*\
+  !*** ./src/img/blackBasket.png ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"0ebb112abb13d4d9970e43600f9fd455.png\");\n\n//# sourceURL=webpack://fast-food-restaurant/./src/img/blackBasket.png?");
+
+/***/ }),
+
+/***/ "./src/img/burgerMenu.svg":
+/*!********************************!*\
+  !*** ./src/img/burgerMenu.svg ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"e0530ffc3e53a3feff6cc15893a6851a.svg\");\n\n//# sourceURL=webpack://fast-food-restaurant/./src/img/burgerMenu.svg?");
+
+/***/ }),
+
+/***/ "./src/img/logo.svg":
+/*!**************************!*\
+  !*** ./src/img/logo.svg ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"f58991e93a32236201af83a27cae7b91.svg\");\n\n//# sourceURL=webpack://fast-food-restaurant/./src/img/logo.svg?");
 
 /***/ }),
 
@@ -1173,6 +1217,11 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		__webpack_require__.p = "/";
 /******/ 	})();
 /******/ 	
 /************************************************************************/
