@@ -51,12 +51,12 @@ export default function Footer () {
                 <div className ='footer-social-network-wrapper-adjustment'>
                     <div className ='footer-social-network'>
                         <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/vk.png' alt = 'vk' />
-                        <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/facebuck.png' alt = 'fs' />
+                        <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/faceboock.png' alt = 'fs' />
                         <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/twitter.png' alt = 'vk' />
                         <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/classmates.png' alt = 'vk' />
                     </div>
                     <div className ='footer-social-network-right' >
-                        <img src = 'ttps://api-test-fast-food-store.herokuapp.com/static/img/AppStore.png' alt = 'app store' />
+                        <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/AppStore.png' alt = 'app store' />
                         <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/GooglePlay.png' alt = 'google play' />
 
                     </div>
