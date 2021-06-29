@@ -62,7 +62,8 @@
         display: none;
     }
     .beacon-drop-down-panel{
-        display: block;        
+        display: block; 
+        margin-top: 15px;
     }
 
     .sticky-panel-link {

@@ -98,7 +98,7 @@ export default function reducer(state = initialState, action) {
                 newState.listProductsInBasket = []
                 newState.valueBascket = 0;                
             }
-           
+           alert('вашь заказ принят (в консоле ответ с бэка)')
 
             return newState
         
