@@ -2,8 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { acceptOrder } from '../../redux/action'
 import './Basket.css';
-import blackBasket from  '../../img/blackBasket.png'
-import basket from  '../../img/basket.png'
+
 
 
 
@@ -18,7 +17,7 @@ export default function Basket() {
     let emptyBasket =
         <div className='basket-control'>
             <span>Товар не выбран</span>
-            <img className='blackBasket-control' src = {blackBasket} />
+            <img className='blackBasket-control' src = 'https://api-test-fast-food-store.herokuapp.com/static/img/blackBasket.png' />
         </div>
     
 
@@ -31,7 +30,7 @@ export default function Basket() {
                     form='buttonBasket'
                     className='state-basket'
                 >
-                    <span className='total-price'> {!state.flagDeliveryMethod?state.valueBascket:state.valueBascketForDelivery}</span><img className='white-basket' src= {basket} />
+                    <span className='total-price'> {!state.flagDeliveryMethod?state.valueBascket:state.valueBascketForDelivery}</span><img className='white-basket' src = 'https://api-test-fast-food-store.herokuapp.com/static/img/Basket.png' />
                 </button> : emptyBasket}
 
         </div>

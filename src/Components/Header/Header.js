@@ -2,17 +2,16 @@ import React from 'react';
 import './Header.css';
 import Basket from '../Basket/Basket';
 import DeliveryMethod from '../DeliveryMethod/DeliveryMethod';
-import burgerMenu from '../../img/burgerMenu.svg';
-import logo from '../../img/logo.svg'
+
 
 
 export default function Header () {
     return (
         <div className = 'header-main' id = 'header'>
             <div className = 'top-header'>
-                <img src = {burgerMenu}/>
+                <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/burgerMenu.svg'/>
                 <div className = 'logo-control'>
-                    <img src = {logo}/>
+                    <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/Logo.svg'/>
                 </div>   
                 <Basket/>         
             </div>

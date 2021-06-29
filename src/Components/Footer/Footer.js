@@ -6,7 +6,7 @@ export default function Footer () {
     return (
         <div>
             <div className = 'footer-top-logo' >
-                <img src = './src/img/logoFooter.png' alt = 'logo' />
+                <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/logoFooter.png' alt = 'logo' />
             </div>
             <div className ='footer-sections-wrapper'>
                 <div className ='footer-sections'>
@@ -50,14 +50,14 @@ export default function Footer () {
             <div className ='footer-social-network-wrapper'>
                 <div className ='footer-social-network-wrapper-adjustment'>
                     <div className ='footer-social-network'>
-                        <img src = './src/img/vk.png' alt = 'vk' />
-                        <img src = './src/img/faceboock.png' alt = 'fs' />
-                        <img src = './src/img/twitter.png' alt = 'vk' />
-                        <img src = './src/img/classmates.png' alt = 'vk' />
+                        <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/vk.png' alt = 'vk' />
+                        <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/facebuck.png' alt = 'fs' />
+                        <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/twitter.png' alt = 'vk' />
+                        <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/classmates.png' alt = 'vk' />
                     </div>
                     <div className ='footer-social-network-right' >
-                        <img src = './src/img/AppStore.png' alt = 'app store' />
-                        <img src = './src/img/GooglePlay.png' alt = 'google play' />
+                        <img src = 'ttps://api-test-fast-food-store.herokuapp.com/static/img/AppStore.png' alt = 'app store' />
+                        <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/GooglePlay.png' alt = 'google play' />
 
                     </div>
                 </div>
