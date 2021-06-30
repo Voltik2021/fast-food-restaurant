@@ -1,8 +1,9 @@
 import React from 'react';
 import './DeliveryMethod.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeDelivery, acceptOrder, selectPickUpService, changeValueInput } from '../../redux/action';
-import { SnackbarContent } from '@material-ui/core';
+import { changeDelivery, acceptOrder, selectPickUpService } from '../../redux/action';
+import { Form, Field } from 'react-final-form';
+import Input from '../Input/Input';
 
 
 export default function DeliveryMethod() {
@@ -14,24 +15,53 @@ export default function DeliveryMethod() {
         <div className='bottom-header'>
             {state.flagDeliveryMethod ?
                 <div>
-                    {console.log(state.valueInputStreet)}
+                   
                     <div>
                         <h1 className='delivery-title-control'>Доставка г.Москва</h1>
                     </div>
-                    <form    
-                        className = 'delivery-form-control'                   
-                        onSubmit = {(e) => dispatch(acceptOrder(e, state.listProductsInBasketForDelivery))}
-                        id='buttonBasket'
-                    >
-                        <label className='delivery-lable-control'>
-                            Улица
-                            <input name = 'street' required ="required"  className='delivery-input' type='text' onChange = {(e) => dispatch(changeValueInput({value:e.target.value, flag: 'street' }))} value = {state.valueInputStreet}/>
-                        </label>
-                        <label className='delivery-lable-control'>
-                            Дом
-                            <input  name = 'house' required ="required" className='delivery-input delivery-input-correction' type='text' onChange = {(e) => dispatch(changeValueInput({value:e.target.value, flag: 'house' }))} value = {state.valueInputHouse}/>
-                        </label>
-                    </form>
+                    <Form
+                        onSubmit = {value => dispatch(acceptOrder(value, state.listProductsInBasketForDelivery))}
+                        validate = {value => {
+                            const errors = {}
+                            if (!value.house) {
+                                errors.house = 'Нужно заполнить для оформления доставки'
+                                return errors
+                              }      
+
+                            if (!value.street) {
+                                errors.street = 'Нужно заполнить для оформления доставки'
+                                return errors
+                              }
+                                                  
+                              return errors
+                           
+                        } }
+                        
+                        render = {({handleSubmit, form, valid}) => (
+                        <form    
+                            className = 'delivery-form-control'                   
+                            onSubmit = {e => {handleSubmit(e); valid && form.resetFieldState('house'); valid && form.resetFieldState('street'); valid && form.reset()}}
+                            id='buttonBasket'
+                        >
+                           
+                            <label className='delivery-lable-control'>
+                                Улица
+                                <Field                                                              
+                                    name = 'street'  
+                                    component = {Input}                                    
+                                />
+                            </label>
+                            <label className='delivery-lable-control'>
+                                Дом
+                                <Field                                     
+                                    name = 'house' 
+                                    component = {Input}                                  
+                                
+                                />
+                            </label>
+                        </form>)}
+                        
+                    />
                 </div>
                 :
                 <div>

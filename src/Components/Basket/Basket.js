@@ -17,7 +17,7 @@ export default function Basket() {
     let emptyBasket =
         <div className='basket-control'>
             <span>Товар не выбран</span>
-            <img className='blackBasket-control' src = 'https://api-test-fast-food-store.herokuapp.com/static/img/blackBasket.png' />
+            <img className='blackBasket-control' src = 'https://api-test-fast-food-store.herokuapp.com/static/img/blackBasket.png' alt = 'empty shopping cart' />
         </div>
     
 
@@ -30,7 +30,7 @@ export default function Basket() {
                     form='buttonBasket'
                     className='state-basket'
                 >
-                    <span className='total-price'> {!state.flagDeliveryMethod?state.valueBascket:state.valueBascketForDelivery}</span><img className='white-basket' src = 'https://api-test-fast-food-store.herokuapp.com/static/img/Basket.png' />
+                    <span className='total-price'> {!state.flagDeliveryMethod?state.valueBascket:state.valueBascketForDelivery}</span><img className='white-basket' src = 'https://api-test-fast-food-store.herokuapp.com/static/img/Basket.png' alt = 'shopping cart with the product' />
                 </button> : emptyBasket}
 
         </div>

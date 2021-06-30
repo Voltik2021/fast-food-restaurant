@@ -1,0 +1,85 @@
+.tooltip-control {
+    position: relative;     
+}
+
+.tooltip {
+    position: absolute;
+    top: 7px;
+    background-color: black;
+    color: white;
+    width: 463px;
+    height: 46px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;    
+
+}
+
+.tooltip::after {
+    content: " ";
+  position: absolute;
+  bottom:  100%; /* At the bottom of the tooltip */
+  left: 30%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;; 
+
+}
+
+.delivery-input {
+    background-color: #F7F6F5;
+    height: 42px;
+    border: none;
+    margin-left: 13px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+@media (min-width: 300px) and (max-width: 1040px) {
+
+    .delivery-input {        
+        height: 30px;         
+        font-size: 14px; 
+            
+    }    
+}
+
+@media (min-width: 300px) and (max-width: 840px) {    
+
+    .delivery-input-correction {
+        margin-left: 35px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 760px) {    
+
+    .delivery-input-correction {
+        margin-left: 28px;
+    }
+   
+
+    
+
+}
+
+@media (min-width: 300px) and (max-width: 640px) {
+
+    .tooltip {
+
+        width: 320px;
+        height: 36px;
+        font-size: 14px;       
+    
+    }
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+
+    .delivery-input {        
+        width: 140px; 
+            
+    }
+}

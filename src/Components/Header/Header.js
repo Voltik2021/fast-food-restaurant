@@ -9,9 +9,9 @@ export default function Header () {
     return (
         <div className = 'header-main' id = 'header'>
             <div className = 'top-header'>
-                <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/BurgerMenu.svg'/>
+                <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/BurgerMenu.svg' alt = 'burger menu' />
                 <div className = 'logo-control'>
-                    <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/logo.svg'/>
+                    <img src = 'https://api-test-fast-food-store.herokuapp.com/static/img/logo.svg' alt = 'logo' />
                 </div>   
                 <Basket/>         
             </div>

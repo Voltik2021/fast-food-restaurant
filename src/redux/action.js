@@ -28,13 +28,6 @@ export function removeFromBasket(product) {
     }
 }
 
-export function changeValueInput(value) {
-    return {
-        type: 'CHANGE_VALUE_INPUT',
-        payload:value
-    }
-}
-
 export function removeBasketForDielivery(product) {
     return {
         type: 'REMOVE_PRODUCT_BASCKET_FOR_DELIVERY',
@@ -42,15 +35,10 @@ export function removeBasketForDielivery(product) {
     }
 }
 
-export function acceptOrder(e, listProducts, pickUpService) {
+export function acceptOrder(value, listProducts, pickUpService) {
     let order
-    if (e) {
-        e.preventDefault()
-
-        let data = new FormData(e.target)
-        let street = data.get('street')
-        let house = data.get('house')
-        order = {address:[street, house], products:listProducts}
+    if (value) {       
+        order = {address:[value.street, value.house], products:listProducts}
     } else {
         order = {address:[pickUpService], products:listProducts}
     }
@@ -85,8 +73,7 @@ function acceptOrderErr(err) {
     }
 }
 
-export function selectPickUpService(value) {
-    console.log(value)
+export function selectPickUpService(value) {   
     return {
         type: 'SELECT_PICK_UP_SERVICE',
         payload: value

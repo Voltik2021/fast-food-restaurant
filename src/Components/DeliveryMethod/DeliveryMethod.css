@@ -2,6 +2,7 @@
     display: flex;   
     justify-content: space-between;
     height: 233px;
+    margin-bottom: 40px;
 }
 
 .delivery-title-control {
@@ -18,14 +19,7 @@
     margin-right: 0;
 }
 
-.delivery-input {
-    background-color: #F7F6F5;
-    height: 42px;
-    border: none;
-    margin-left: 13px;
-    font-size: 16px;
-    border-radius: 4px;
-}
+
 
 .error-messages {
     background-color: red;
@@ -66,13 +60,7 @@
     .delivery-lable-control{
         font-size: 24px;
         margin: 0 30px 0 0;       
-    }
-
-    .delivery-input {        
-        height: 30px;         
-        font-size: 14px; 
-            
-    }
+    } 
 
     .header-button-control{       
         height: 35px;
@@ -88,9 +76,6 @@
         display: block;       
     }
 
-    .delivery-input-correction {
-        margin-left: 35px;
-    }
 }
 
 @media (min-width: 300px) and (max-width: 760px) {
@@ -108,13 +93,6 @@
         font-size: 18px;   
         margin-top: 5px;   
     }
-
-    .delivery-input-correction {
-        margin-left: 28px;
-    }
-   
-
-    
 
 }
 
