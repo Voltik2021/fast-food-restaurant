@@ -53,10 +53,10 @@ export default function reducer(state = initialState, action) {
                 return newState
             }
            
-        case 'REMOVE_PRODUCT_BASCKET':
+        case 'REMOVE_PRODUCT_BASCKET':         
             newState = {...state}
             newState.valueBascket -= action.payload.price 
-            findProduct = newState.listProductsInBasket.find(item => item.id === action.payload.id)
+            findProduct = newState.listProductsInBasket.find(item => item.id === action.payload.id)           
             findProduct.quantity -= 1
             return newState
 
